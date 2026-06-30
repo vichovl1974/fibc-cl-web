@@ -1,0 +1,22 @@
+{
+  "project": "FIBC.cl Laboratorio Técnico",
+  "version": "1.0",
+  "critical_rules": {
+    "un_transport_question": {
+      "trigger": "user_requests_fibc_un_code",
+      "question": "¿Cómo será transportada o utilizada la carga?",
+      "options": [
+        "Camión / transporte terrestre",
+        "Barco / vía marítima",
+        "Uso interno"
+      ],
+      "if_option_selected": {
+        "Barco / vía marítima": {
+          "internal_status": "Requiere revisión técnica para determinar si corresponde FIBC código UN.",
+          "public_warning_at_this_step": false
+        }
+      }
+    }
+  },
+  "contact_email": "contacto@fibc.cl"
+}
